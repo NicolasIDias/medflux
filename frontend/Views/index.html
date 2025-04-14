@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="MedFlux">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <title>MedFlux</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="icon" type="image/png" href="../public/images/icon2.png">
+</head>
+
+<body>
+  <header class="header d-flex justify-content-between align-items-center px-5 py-1">
+    <div class="logo">
+      <a href="./index.html"><img src="../public/images/logo-medflux.png" alt="Logo" style="height:80px;"></a>
+    </div>
+    <div class="header-buttons d-grid gap-2 d-md-block">
+      <a href="#" class="button btn btn-secondary">Ver Hospitais</a>
+      <a href="#" class="button btn btn-primary">Fazer Login</a>
+      <a href="#" class="button btn btn-primary">Cadastro</a>
+    </div>
+  </header>
+
+  <div class="options d-flex flex-row-reverse px-3 navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-3">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sou Medico</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sou Hospital</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <div class="container">
+      <div id="homepage-carrossel" class="carousel slide d-flex py-4 mx-auto" style="max-width: 800px;">
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active ">
+            <img src="../public/images/image.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../public/images/image.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../public/images/image.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#homepage-carrossel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#homepage-carrossel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class="cards-facilidades row mt-sm-3">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Quer ser atendido?</h5>
+              <p class="card-text">Utilize o nosso sistema para obter previsao de atendimento no conforto da sua casa
+              </p>
+              <a href="./filas-hospitais.html" class="btn btn-primary">Entre na fila de atendimento</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Nao possui conta?</h5>
+              <p class="card-text">Para utilizar nosso sistema, crie ja sua conta gratuitamente e faca parte da
+                comunidade MedFlux</p>
+              <a href="#" class="btn btn-primary">Cadastro</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Lorem, ipsum dolor.</h5>
+              <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, in consequatur
+                autem quidem.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="blog-medflux-menu mt-5">
+        <div class="post-card card mb-2">
+          <h5 class="card-header">Featured</h5>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-success">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="post-card card mb-2">
+          <h5 class="card-header">Featured</h5>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-success">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="post-card card mb-2">
+          <h5 class="card-header">Featured</h5>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-success">Go somewhere</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- <div class="aside-container">
+      <aside>
+
+      </aside>
+    </div> -->
+  </main>
+
+
+  <footer class="bg-light text-center py-3 mt-5 border-top">
+    <p class="mb-1">&copy; 2025 MedFlux. Todos os direitos reservados.</p>
+    <p class="mb-0">
+      Desenvolvido por <a href="https://github.com/NicolasIDias" target="_blank">Nicolas</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

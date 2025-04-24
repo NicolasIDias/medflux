@@ -9,11 +9,20 @@ loginForm.addEventListener("submit", async (event) => {
   const users = await findUserByEmail(data.loginEmail);
   const user = users[0];
   if (user) {
-    checkPassword(user, data.loginSenha);
+    const success = await checkPassword(user.senha, data.loginSenha);
+
+    if(success) console.log("login efetuado com sucesso"); // logica
+    else handleErrorMessage(passwordLoginInput, "Senha incorreta");
+
   } else {
     handleErrorMessage(loginEmailInput, "Nenhum usuário encontrado com este email");
   }
 })
+
+async function checkPassword(userPassword, password) {
+  if(userPassword != password) return 0
+  return 1
+}
 
 async function findUserByEmail(email) {
   const response = await fetch(`http://localhost:3000/usuarios?email=${email}`);

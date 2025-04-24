@@ -1,0 +1,64 @@
+{
+
+  "usuarios": [
+    {
+      "name": "asdasd",
+      "birthDate": "2025-04-03",
+      "email": "dddddd@dd",
+      "senha": "asdasdasd",
+      "confirmedPassword": "asdasdasd",
+      "id": "2FzLdnf"
+    }
+  ],
+
+
+  "users": [
+    {
+      "id": 1,
+      "name": "Nicolas Dias",
+      "email": "nicolasbhgamer@gemail.com",
+      "password": "senha",
+      "role": "patient",
+      "queueId": 1,
+      "reportedIssues": ["Febre alta eDor no peito"],
+      "medicalReports": [
+        {
+          "doctorId": 1,
+          "reportText": "Paciente apresenta sintomas gripais. Recomendado repouso.",
+          "date": "2025-04-24T10:30:00Z"
+        }
+      ],
+      "createdAt": "2025-04-24T08:00:00Z",
+      "updatedAt": "2025-04-24T10:00:00Z"
+    }
+  ],
+  "doctors": [
+    {
+      "id": 1,
+      "name": "Dra. Mariana Souza",
+      "email": "mariana@hospital.com",
+      "password": "senha",
+      "role": "doctor",
+      "specialty": "Clínico Geral",
+      "hospitalId": 1
+    }
+  ],
+  "queues": [
+    {
+      "id": 1,
+      "hospitalId": 1,
+      "specialty": "Clínico Geral",
+      "patients": [1], 
+      "status": "aberta",
+      "createdAt": "2025-04-24T07:00:00Z"
+    }
+  ],
+  "hospitals": [
+    {
+      "id": 1,
+      "name": "Hospital Central",
+      "address": "Av. Saúde, 123 - Centro",
+      "phone": "(69) 69696-6969"
+    }
+  ]
+}

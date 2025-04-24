@@ -19,8 +19,8 @@
     </div>
     <div class="header-buttons d-grid gap-2 d-md-block">
       <a href="#" class="button btn btn-secondary">Ver Hospitais</a>
-      <a href="#" class="button btn btn-primary">Fazer Login</a>
-      <a href="#" class="button btn btn-primary">Cadastro</a>
+      <a href="#" class="button btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Fazer Login</a>
+      <a href="#" class="button btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Cadastro</a>
     </div>
   </header>
 
@@ -82,7 +82,7 @@
               <h5 class="card-title">Nao possui conta?</h5>
               <p class="card-text">Para utilizar nosso sistema, crie ja sua conta gratuitamente e faca parte da
                 comunidade MedFlux</p>
-              <a href="#" class="btn btn-primary">Cadastro</a>
+                <a href="#" class="button btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Cadastro</a>
             </div>
           </div>
         </div>
@@ -134,6 +134,83 @@
       </aside>
     </div> -->
   </main>
+
+  <!-- TESTE -->
+  <!-- Modal de Login -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="POST" id="login-form">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="loginEmail" name="loginEmail" placeholder="seu@email.com">
+            </div>
+            <div class="mb-3">
+              <label for="loginSenha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="loginSenha" name="loginSenha" placeholder="Digite sua senha">
+            </div>
+            <!-- LEMBRAR DE MUDAR A URL -->
+            <h6><a href="./index.html" style="text-decoration: none;"><p>Esqueceu a senha?</p></a></h6>
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="text-center w-100">Não tem conta? <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"
+              data-bs-dismiss="modal">Cadastre-se</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/pages/login/form-validation.js" defer></script>
+
+
+
+
+<!-- FORMULARIO DE CADASTRO DE TESTE -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Registre</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="POST" id="register-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Nome completo">
+            </div>
+            <div class="mb-3">
+              <label for="birthDate" class="form-label">Email</label>
+              <input type="date" class="form-control" id="birthDate" name="birthDate">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email: seuemail@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">              
+            </div>
+            <div class="mb-2">
+              <input type="password" class="form-control" id="confirmedPassword" name="confirmedPassword" placeholder="Confirme a senha">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrar</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="text-center w-100">Ja possui conta? <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal"
+              data-bs-dismiss="modal">Faca login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/pages/register/form-validation.js" defer></script>
 
 
   <footer class="bg-light text-center py-3 mt-5 border-top">

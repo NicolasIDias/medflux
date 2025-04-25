@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-3">
             <li class="nav-item">
-              <a class="nav-link" href="#">Sou Medico</a>
+              <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#doctorLoginModal">Sou Medico</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Sou Hospital</a>
@@ -136,7 +136,7 @@
   </main>
 
   <!-- TESTE -->
-  <!-- Modal de Login -->
+  <!-- Modal de Login USUARIO -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -166,7 +166,35 @@
       </div>
     </div>
   </div>
-  <script src="./assets/js/pages/login/form-validation.js" defer></script>
+  <script type="module" src="./assets/js/pages/login/form-validation.js" defer></script>
+
+    <!-- Modal de Login MEDICO -->
+    <div class="modal fade" id="doctorLoginModal" tabindex="-1" aria-labelledby="doctorLoginModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="doctorLoginModalLabel">Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="POST" id="doctor-login-form">
+              <div class="mb-3">
+                <label for="loginEmail" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="doctorLoginEmail" name="doctorLoginEmail" placeholder="seu@email.com">
+              </div>
+              <div class="mb-3">
+                <label for="loginSenha" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="doctorLoginSenha" name="doctorLoginSenha" placeholder="Digite sua senha">
+              </div>
+              <!-- LEMBRAR DE MUDAR A URL -->
+              <h6><a href="./index.html" style="text-decoration: none;"><p>Esqueceu a senha?</p></a></h6>
+              <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./assets/js/pages/login/doctor-form-validation.js" defer></script>
 
 
 

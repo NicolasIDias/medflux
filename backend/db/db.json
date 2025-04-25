@@ -1,5 +1,4 @@
 {
-
   "usuarios": [
     {
       "name": "asdasd",
@@ -10,17 +9,17 @@
       "id": "2FzLdnf"
     }
   ],
-
-
   "users": [
     {
       "id": 1,
       "name": "Nicolas Dias",
       "email": "nicolasbhgamer@gemail.com",
-      "password": "senha",
+      "senha": "senha",
       "role": "patient",
       "queueId": 1,
-      "reportedIssues": ["Febre alta eDor no peito"],
+      "reportedIssues": [
+        "Febre alta eDor no peito"
+      ],
       "medicalReports": [
         {
           "doctorId": 1,
@@ -35,9 +34,9 @@
   "doctors": [
     {
       "id": 1,
-      "name": "Dra. Mariana Souza",
+      "name": "Dra. Mariana Sousa",
       "email": "mariana@hospital.com",
-      "password": "senha",
+      "senha": "senha",
       "role": "doctor",
       "specialty": "Clínico Geral",
       "hospitalId": 1
@@ -48,7 +47,9 @@
       "id": 1,
       "hospitalId": 1,
       "specialty": "Clínico Geral",
-      "patients": [1], 
+      "patients": [
+        1
+      ],
       "status": "aberta",
       "createdAt": "2025-04-24T07:00:00Z"
     }
@@ -58,7 +59,58 @@
       "id": 1,
       "name": "Hospital Central",
       "address": "Av. Saúde, 123 - Centro",
-      "phone": "(69) 69696-6969"
+      "phone": "(69) 69696-6969",
+      "filas": [
+        101,
+        102,
+        103
+      ],
+      "convenios": [
+        "Cassi",
+        "Unimed",
+        "Bradesco Saúde"
+      ],
+      "tiposAtendimento": [
+        "Ortopedia",
+        "Pediatria",
+        "Clínico Geral"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Hospital Vida Nova",
+      "address": "Rua Esperança, 456 - Bairro Feliz",
+      "phone": "(11) 11111-1111",
+      "filas": [
+        201,
+        202
+      ],
+      "convenios": [
+        "Amil",
+        "SulAmérica"
+      ],
+      "tiposAtendimento": [
+        "Cardiologia",
+        "Dermatologia"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Hospital São Lucas",
+      "address": "Travessa Cuidado, 789 - Zona Norte",
+      "phone": "(22) 22222-2222",
+      "filas": [
+        301
+      ],
+      "convenios": [
+        "Unimed",
+        "NotreDame"
+      ],
+      "tiposAtendimento": [
+        "Pediatria",
+        "Ginecologia",
+        "Psiquiatria"
+      ]
     }
   ]
 }

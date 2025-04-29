@@ -1,116 +1,113 @@
 {
   "usuarios": [
     {
-      "name": "asdasd",
-      "birthDate": "2025-04-03",
-      "email": "dddddd@dd",
-      "senha": "asdasdasd",
-      "confirmedPassword": "asdasdasd",
-      "id": "2FzLdnf"
-    }
-  ],
-  "users": [
-    {
       "id": 1,
-      "name": "Nicolas Dias",
-      "email": "nicolasbhgamer@gemail.com",
+      "nome": "Nicolas Dias",
+      "telefone": "(31) 99999-9999",
+      "email": "nicolasbhgamer@gmail.com",
+      "dataNascimento": "2006-07-06T00:00:00Z",
+      "cep": "31260-020",
+      "endereco": "Av. teste, 123 - Centro",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
       "senha": "senha",
-      "role": "patient",
-      "queueId": 1,
-      "reportedIssues": [
-        "Febre alta eDor no peito"
+      "role": "paciente",
+      "filaId": 1,
+      "problemasRelatados": [
+        "Febre alta e Dor no peito"
       ],
-      "medicalReports": [
-        {
-          "doctorId": 1,
-          "reportText": "Paciente apresenta sintomas gripais. Recomendado repouso.",
-          "date": "2025-04-24T10:30:00Z"
-        }
+      "relatoriosMedicosIds": [
+        1
       ],
-      "createdAt": "2025-04-24T08:00:00Z",
-      "updatedAt": "2025-04-24T10:00:00Z"
+      "criadoEm": "2025-04-24T08:00:00Z",
+      "atualizadoEm": "2025-04-24T10:00:00Z"
     }
   ],
-  "doctors": [
+  "medicos": [
     {
       "id": 1,
-      "name": "Dra. Mariana Sousa",
+      "nome": "Dra. Mariana Sousa",
       "email": "mariana@hospital.com",
       "senha": "senha",
-      "role": "doctor",
-      "specialty": "Clínico Geral",
-      "hospitalId": 1
+      "role": "medico",
+      "especialidade": "Clínico Geral",
+      "hospitalId": 1,
+      "horarios": [
+        {
+          "dia": "Segunda",
+          "de": "08:00",
+          "ate": "12:00"
+        },
+        {
+          "dia": "Quarta",
+          "de": "14:00",
+          "ate": "18:00"
+        }
+      ],
+      "criadoEm": "2025-04-24T07:00:00Z",
+      "atualizadoEm": "2025-04-24T07:00:00Z"
     }
   ],
-  "queues": [
+  "filas": [
     {
       "id": 1,
       "hospitalId": 1,
-      "specialty": "Clínico Geral",
-      "patients": [
-        1
+      "especialidade": "Clínico Geral",
+      "entradas": [
+        {
+          "id": 1,
+          "idUsuario": 1,
+          "entrouEm": "2025-04-24T09:00:00Z",
+          "prioridade": "normal",
+          "status": "aguardando"
+        }
       ],
       "status": "aberta",
-      "createdAt": "2025-04-24T07:00:00Z"
+      "tempoEsperaEstimado": 30,
+      "criadoEm": "2025-04-24T07:00:00Z",
+      "atualizadoEm": "2025-04-24T07:00:00Z"
     }
   ],
-  "hospitals": [
+  "hospitais": [
     {
       "id": 1,
-      "name": "Hospital Central",
-      "address": "Av. Saúde, 123 - Centro",
-      "phone": "(69) 69696-6969",
-      "filas": [
-        101,
-        102,
-        103
+      "nome": "Hospital Central",
+      "endereco": "Av. Saúde, 123 - Centro",
+      "cep": "31450-350",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "telefone": "(69) 69696-6969",
+      "filasIds": [
+        1
       ],
       "convenios": [
         "Cassi",
-        "Unimed",
-        "Bradesco Saúde"
+        "Unimed"
       ],
       "tiposAtendimento": [
+        "Presencial",
+        "Online"
+      ],
+      "especialidades": [
         "Ortopedia",
         "Pediatria",
         "Clínico Geral"
-      ]
-    },
+      ],
+      "criadoEm": "2025-04-24T07:00:00Z",
+      "atualizadoEm": "2025-04-24T07:00:00Z"
+    }
+  ],
+  "relatorios": [
     {
-      "id": 2,
-      "name": "Hospital Vida Nova",
-      "address": "Rua Esperança, 456 - Bairro Feliz",
-      "phone": "(11) 11111-1111",
-      "filas": [
-        201,
-        202
-      ],
-      "convenios": [
-        "Amil",
-        "SulAmérica"
-      ],
-      "tiposAtendimento": [
-        "Cardiologia",
-        "Dermatologia"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Hospital São Lucas",
-      "address": "Travessa Cuidado, 789 - Zona Norte",
-      "phone": "(22) 22222-2222",
-      "filas": [
-        301
-      ],
-      "convenios": [
-        "Unimed",
-        "NotreDame"
-      ],
-      "tiposAtendimento": [
-        "Pediatria",
-        "Ginecologia",
-        "Psiquiatria"
-      ]
+      "id": 1,
+      "pacienteId": 1,
+      "medicoId": 1,
+      "filaEntradaId": 1,
+      "texto": "Paciente apresenta sintomas gripais. Recomendado repouso.",
+      "inicioConsulta": "2025-04-24T10:00:00Z",
+      "fimConsulta": "2025-04-24T10:30:00Z",
+      "notas": "Paciente estável, sem complicações.",
+      "data": "2025-04-24T10:30:00Z"
     }
   ]
 }

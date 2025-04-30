@@ -100,6 +100,25 @@
       "criadoEm": "2025-04-29T01:21:48.046Z",
       "atualizadoEm": "2025-04-29T01:21:48.046Z",
       "id": 5
+    },
+    {
+      "nome": "asdasdasd",
+      "dataNascimento": "1111-11-11T00:00:00.000Z",
+      "telefone": "1111111111",
+      "email": "nicolasbhgamer@gmail.comasdasd",
+      "cep": "123123123",
+      "endereco": "Rua mineira 69",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "convenio": "Unimed",
+      "senha": "asdasdasd",
+      "role": "paciente",
+      "filaId": null,
+      "problemasRelatados": [],
+      "relatoriosMedicosIds": [],
+      "criadoEm": "2025-04-30T00:56:13.066Z",
+      "atualizadoEm": "2025-04-30T00:56:13.066Z",
+      "id": 6
     }
   ],
   "medicos": [

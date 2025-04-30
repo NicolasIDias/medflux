@@ -1,3 +1,5 @@
+import { Endpoints, post } from "../../core/http.js";
+
 const registerForm = document.querySelector("#register-form");
 const registerNameInput = registerForm.querySelector("#name");
 const registerBirthDateInput = registerForm.querySelector("#birthDate");
@@ -35,11 +37,7 @@ registerForm.addEventListener("submit", async (event) => {
 });
 
 async function register(data) {
-  const res = await fetch("http://localhost:3000/usuarios", {
-    method: 'POST',
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(data)
-  });
+  const res = await post(Endpoints.USUARIOS, data)
   if (!res.ok) {
     console.error("Erro ao criar usuário:", res.statusText);
     return;

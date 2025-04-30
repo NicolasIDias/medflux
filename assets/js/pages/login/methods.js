@@ -1,7 +1,7 @@
 // methods.js
 class Methods {
   async checkPassword(userPassword, password) {
-    return userPassword == password;
+    return userPassword == password
   }
 
   async findUserByEmail(email, context) {

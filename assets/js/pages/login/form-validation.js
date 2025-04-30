@@ -19,8 +19,10 @@ loginForm.addEventListener("submit", async (event) => {
   const isPasswordCorrect = await methods.checkPassword(user.senha, data.loginSenha);
 
   if (isPasswordCorrect) {
-    console.log("Login efetuado com sucesso!");
+    console.log(`Login efetuado com sucesso!`);
+    // Nao esquecer de fazer isso
     //window.location.href = "/dashboard.html";
+    localStorage.setItem("authToken", user.id)
   } else {
     methods.handleErrorMessage(passwordLoginInput, "Senha incorreta");
   }

@@ -1,0 +1,346 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Nicolas Dias",
+      "telefone": "(31) 99999-9999",
+      "email": "nicolasbhgamer@gmail.com",
+      "dataNascimento": "2006-07-06T00:00:00Z",
+      "cep": "31260-020",
+      "endereco": "Av. Teste, 123 - Centro",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "senha": "senha123",
+      "role": "paciente",
+      "filaId": 1,
+      "problemasRelatados": [
+        "Febre alta",
+        "Dor no peito"
+      ],
+      "relatoriosMedicosIds": [
+        1,
+        2
+      ],
+      "convenio": "Unimed",
+      "criadoEm": "2025-04-24T08:00:00Z",
+      "atualizadoEm": "2025-04-25T11:15:00Z"
+    },
+    {
+      "id": 2,
+      "nome": "Ana Silva",
+      "telefone": "(31) 98888-7777",
+      "email": "ana.silva@example.com",
+      "dataNascimento": "1985-02-20T00:00:00Z",
+      "cep": "30140-010",
+      "endereco": "Rua das Flores, 456 - Lourdes",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "senha": "ana2025",
+      "role": "paciente",
+      "filaId": 2,
+      "problemasRelatados": [
+        "Dor lombar crônica",
+        "Hipertensão"
+      ],
+      "relatoriosMedicosIds": [
+        3
+      ],
+      "convenio": "Bradesco Saúde",
+      "criadoEm": "2025-04-25T09:30:00Z",
+      "atualizadoEm": "2025-04-25T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "nome": "Carlos Souza",
+      "telefone": "(31) 95555-5555",
+      "email": "carlossouza@example.com",
+      "dataNascimento": "1990-05-15T00:00:00Z",
+      "cep": "30140-080",
+      "endereco": "Rua Mascarenhas, 789 - Savassi",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "senha": "minhasenha",
+      "role": "paciente",
+      "filaId": null,
+      "problemasRelatados": [],
+      "relatoriosMedicosIds": [],
+      "convenio": null,
+      "criadoEm": "2025-04-28T12:00:00Z",
+      "atualizadoEm": "2025-04-28T12:00:00Z"
+    },
+    {
+      "nome": "Nicolas dias",
+      "dataNascimento": "2001-02-08",
+      "telefone": "31997996978",
+      "email": "joasknuicolas@gmail.com",
+      "cep": "31260020",
+      "endereco": "Rua mineira 69",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "convenio": "Unimed",
+      "senha": "Nicolasdas",
+      "role": "paciente",
+      "id": 4
+    },
+    {
+      "nome": "asdasdasd",
+      "dataNascimento": "2025-03-30T00:00:00.000Z",
+      "telefone": "31997996978",
+      "email": "asdasd@sdsd",
+      "cep": "31260020",
+      "endereco": "Rua mineira 69",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "convenio": "Cassi",
+      "senha": "asdasdasd",
+      "role": "paciente",
+      "filaId": null,
+      "problemasRelatados": [],
+      "relatoriosMedicosIds": [],
+      "criadoEm": "2025-04-29T01:21:48.046Z",
+      "atualizadoEm": "2025-04-29T01:21:48.046Z",
+      "id": 5
+    }
+  ],
+  "medicos": [
+    {
+      "id": 1,
+      "nome": "Dra. Mariana Sousa",
+      "email": "mariana@hospital.com",
+      "senha": "senha",
+      "role": "medico",
+      "especialidade": "Clínico Geral",
+      "hospitalId": 1,
+      "horarios": [
+        {
+          "dia": "Sexta",
+          "de": "2025-04-24T07:00:00Z",
+          "ate": "2025-04-24T07:00:00Z",
+          "conteudo": {
+            "atendimento_online": {
+              "userId": 1,
+              "url": "",
+              "tipo": "video_chamada"
+            }
+          }
+        },
+        {
+          "dia": "Sexta",
+          "de": "2025-04-24T07:00:00Z",
+          "ate": "2025-04-24T07:00:00Z",
+          "conteudo": {
+            "atendimento_online": {
+              "userId": 2,
+              "url": "",
+              "tipo": "video_chamada"
+            }
+          }
+        },
+        {
+          "dia": "Sexta",
+          "de": "2025-04-24T07:00:00Z",
+          "ate": "2025-04-24T07:00:00Z",
+          "conteudo": {
+            "atendimento_online": {
+              "userId": 3,
+              "url": "",
+              "tipo": "video_chamada"
+            }
+          }
+        }
+      ],
+      "criadoEm": "2025-04-24T07:00:00Z",
+      "atualizadoEm": "2025-04-24T07:00:00Z"
+    },
+    {
+      "id": 2,
+      "nome": "Dr. Carlos Menezes",
+      "email": "carlos.menezes@ortho.com",
+      "senha": "ortho123",
+      "role": "medico",
+      "especialidade": "Ortopedia",
+      "hospitalId": 1,
+      "horarios": [
+        {
+          "dia": "Terça",
+          "de": "10:00",
+          "ate": "16:00"
+        },
+        {
+          "dia": "Quinta",
+          "de": "10:00",
+          "ate": "16:00"
+        }
+      ],
+      "criadoEm": "2025-04-24T07:30:00Z",
+      "atualizadoEm": "2025-04-24T07:30:00Z"
+    },
+    {
+      "id": 3,
+      "nome": "Dra. Raquel Ferreira",
+      "email": "raquel@hospitalnordeste.com",
+      "senha": "nordeste456",
+      "role": "medico",
+      "especialidade": "Pediatria",
+      "hospitalId": 2,
+      "horarios": [
+        {
+          "dia": "Segunda",
+          "de": "14:00",
+          "ate": "20:00"
+        },
+        {
+          "dia": "Quarta",
+          "de": "08:00",
+          "ate": "14:00"
+        },
+        {
+          "dia": "Sábado",
+          "de": "09:00",
+          "ate": "13:00"
+        }
+      ],
+      "criadoEm": "2025-04-25T08:00:00Z",
+      "atualizadoEm": "2025-04-25T08:00:00Z"
+    }
+  ],
+  "filas": [
+    {
+      "id": 1,
+      "hospitalId": 1,
+      "especialidade": "Clínico Geral",
+      "entradas": [
+        {
+          "id": 1,
+          "idUsuario": 1,
+          "entrouEm": "2025-04-24T09:00:00Z",
+          "prioridade": "normal",
+          "status": "aguardando"
+        },
+        {
+          "id": 2,
+          "idUsuario": 2,
+          "entrouEm": "2025-04-25T10:00:00Z",
+          "prioridade": "alta",
+          "status": "em atendimento"
+        }
+      ],
+      "status": "aberta",
+      "tipoAtendimento": "ONLINE",
+      "tempoEsperaEstimado": 25,
+      "criadoEm": "2025-04-24T07:00:00Z",
+      "atualizadoEm": "2025-04-25T10:05:00Z"
+    },
+    {
+      "id": 2,
+      "hospitalId": 1,
+      "especialidade": "Ortopedia",
+      "entradas": [
+        {
+          "id": 3,
+          "idUsuario": 2,
+          "entrouEm": "2025-04-25T09:35:00Z",
+          "prioridade": "baixa",
+          "status": "aguardando"
+        }
+      ],
+      "status": "aberta",
+      "tipoAtendimento": "PRESENCIAL",
+      "tempoEsperaEstimado": 40,
+      "criadoEm": "2025-04-25T09:00:00Z",
+      "atualizadoEm": "2025-04-25T09:35:00Z"
+    }
+  ],
+  "hospitais": [
+    {
+      "id": 1,
+      "nome": "Hospital Central",
+      "endereco": "Av. Saúde, 123 - Centro",
+      "cep": "31450-350",
+      "estado": "MG",
+      "cidade": "Belo Horizonte",
+      "telefone": "(31) 3333-4444",
+      "filasIds": [
+        1,
+        2
+      ],
+      "convenios": [
+        "Cassi",
+        "Unimed",
+        "Bradesco Saúde"
+      ],
+      "tiposAtendimento": [
+        "Presencial",
+        "Online"
+      ],
+      "especialidades": [
+        "Ortopedia",
+        "Pediatria",
+        "Clínico Geral",
+        "Dermatologia"
+      ],
+      "criadoEm": "2025-04-24T07:00:00Z",
+      "atualizadoEm": "2025-04-25T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "nome": "Hospital Nordeste",
+      "endereco": "Rua do Norte, 789 - Bairro Novo",
+      "cep": "60000-000",
+      "estado": "CE",
+      "cidade": "Fortaleza",
+      "telefone": "(85) 4002-8922",
+      "filasIds": [
+        3
+      ],
+      "convenios": [
+        "Porto Seguro",
+        "Amil"
+      ],
+      "tiposAtendimento": [
+        "Presencial"
+      ],
+      "especialidades": [
+        "Pediatria",
+        "Clínico Geral"
+      ],
+      "criadoEm": "2025-04-25T07:45:00Z",
+      "atualizadoEm": "2025-04-25T07:45:00Z"
+    }
+  ],
+  "relatorios": [
+    {
+      "id": 1,
+      "pacienteId": 1,
+      "medicoId": 1,
+      "filaEntradaId": 1,
+      "texto": "Paciente apresenta sintomas gripais. Recomendado repouso.",
+      "inicioConsulta": "2025-04-24T10:00:00Z",
+      "fimConsulta": "2025-04-24T10:30:00Z",
+      "notas": "Paciente estável, sem complicações.",
+      "data": "2025-04-24T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "pacienteId": 1,
+      "medicoId": 1,
+      "filaEntradaId": 2,
+      "texto": "Reavaliação de sintomas após dois dias. Sem febre, dor leve controlada.",
+      "inicioConsulta": "2025-04-26T09:00:00Z",
+      "fimConsulta": "2025-04-26T09:20:00Z",
+      "notas": "Manter repouso e hidratação.",
+      "data": "2025-04-26T09:20:00Z"
+    },
+    {
+      "id": 3,
+      "pacienteId": 2,
+      "medicoId": 2,
+      "filaEntradaId": 3,
+      "texto": "Paciente com dor lombar crônica. Prescrito fisioterapia.",
+      "inicioConsulta": "2025-04-25T10:00:00Z",
+      "fimConsulta": "2025-04-25T10:45:00Z",
+      "notas": "Agendar sessão semanal.",
+      "data": "2025-04-25T10:45:00Z"
+    }
+  ]
+}

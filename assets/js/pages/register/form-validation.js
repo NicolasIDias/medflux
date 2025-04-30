@@ -1,72 +1,110 @@
-const registerForm = document.querySelector("#register-form")
-const registerNameInput = registerForm.querySelector("#name")
-const registerEmailInput = registerForm.querySelector("#email")
-const registerPasswordInput = registerForm.querySelector("#senha")
-const registerPasswordConfirmInput = registerForm.querySelector("#confirmedPassword")
-
+const registerForm = document.querySelector("#register-form");
+const registerNameInput = registerForm.querySelector("#name");
+const registerBirthDateInput = registerForm.querySelector("#birthDate");
+const registerPhoneInput = registerForm.querySelector("#telefone");
+const registerEmailInput = registerForm.querySelector("#email");
+const registerCEPInput = registerForm.querySelector("#cep");
+const registerAddressInput = registerForm.querySelector("#endereco");
+const registerCityInput = registerForm.querySelector("#cidade");
+const registerStateInput = registerForm.querySelector("#estado");
+const registerConvenioSelect = registerForm.querySelector("#convenio");
+const registerPasswordInput = registerForm.querySelector("#senha");
+const registerPasswordConfirmInput = registerForm.querySelector("#confirmedPassword");
 
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const data = Object.fromEntries(new FormData(registerForm));
-  console.log(data)
-  const emailExists = await checkIfEmailHasExists(data.email)
-  const passwordInvalid = await validatePassword(data.senha, data.confirmedPassword)
+  clearAllErrors();
 
-  if (!emailExists && !passwordInvalid) await register(data)
-})
+  const data = Object.fromEntries(new FormData(registerForm));
+
+  const emailExists = await checkIfEmailHasExists(data.email);
+  const passwordInvalid = validatePassword(data.senha, data.confirmedPassword);
+  const missingFields = validateRequiredFields(data);
+
+  if (emailExists || passwordInvalid || missingFields) return;
+  delete data.confirmedPassword;        
+  data.dataNascimento = new Date(data.dataNascimento).toISOString();
+  data.filaId = null;
+  data.problemasRelatados = [];
+  data.relatoriosMedicosIds = [];
+  const now = new Date().toISOString();
+  data.criadoEm = now;
+  data.atualizadoEm = now;
+
+  await register(data);
+});
 
 async function register(data) {
-  const response = await fetch(`http://localhost:3000/usuarios`, {
+  const res = await fetch("http://localhost:3000/usuarios", {
     method: 'POST',
-    headers: {
-      "Content-Type": "application/json",
-    },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
-  })
-
-  console.log("Chegou ate aqui")
-  return response.json()
+  });
+  if (!res.ok) {
+    console.error("Erro ao criar usuário:", res.statusText);
+    return;
+  }
+  const created = await res.json();
+  console.log("Usuário criado:", created);
 }
-
 
 async function checkIfEmailHasExists(email) {
   const users = await findByEmail(email);
-  const userExists = users.some(user => user.email === email);
-  if (userExists) {
-    handleErrorMessage(registerEmailInput, "Este email ja esta sendo utilizado")
-    return true
-  }
-  return false
+  const userExists = users.some(u => u.email === email);
+  if (userExists) handleErrorMessage(registerEmailInput, "Este email já está em uso");
+  return userExists;
 }
 
 async function findByEmail(email) {
-  const response = await fetch(`http://localhost:3000/usuarios?email=${email}`);
-  const users = await response.json();
-  return users;
+  const res = await fetch(`http://localhost:3000/usuarios?email=${encodeURIComponent(email)}`);
+  return await res.json();
 }
 
-async function validatePassword(password, confirmedPassword) {
-  if (password != confirmedPassword) {
-    handleErrorMessage(registerPasswordConfirmInput, "As senhas nao coincidem")
-    return true
+function validatePassword(password, confirmed) {
+  if (password !== confirmed) {
+    handleErrorMessage(registerPasswordConfirmInput, "As senhas não coincidem");
+    return true;
   }
-  else if (password.length < 8) {
-    handleErrorMessage(registerPasswordConfirmInput, "A senha deve ter no minimo 8 caracteres")
-    return true
+  if (password.length < 8) {
+    handleErrorMessage(registerPasswordInput, "A senha deve ter ao menos 8 caracteres");
+    return true;
   }
-  return false
+  return false;
 }
 
-function handleErrorMessage(element, message) {
-  let error = element.nextElementSibling;
+function validateRequiredFields(data) {
+  let missing = false;
+  const camposObrigatorios = {
+    nome: registerNameInput,
+    dataNascimento: registerBirthDateInput,
+    telefone: registerPhoneInput,
+    email: registerEmailInput,
+    cep: registerCEPInput,
+    endereco: registerAddressInput,
+    cidade: registerCityInput,
+    estado: registerStateInput,
+    senha: registerPasswordInput
+  };
+  Object.entries(camposObrigatorios).forEach(([key, el]) => {
+    if (!data[key] || data[key].trim() === "") {
+      handleErrorMessage(el, "Campo obrigatório");
+      missing = true;
+    }
+  });
+  return missing;
+}
 
+function clearAllErrors() {
+  registerForm.querySelectorAll(".message-error").forEach(e => e.remove());
+}
+
+function handleErrorMessage(el, msg) {
+  let error = el.nextElementSibling;
   if (!error || !error.classList.contains("message-error")) {
     error = document.createElement("p");
     error.classList.add("message-error");
-    element.insertAdjacentElement("afterend", error);
+    el.insertAdjacentElement("afterend", error);
   }
-
-  error.style.display = "block";
-  error.style.color = 'red'
-  error.innerText = message;
+  error.style.color = "red";
+  error.innerText = msg;
 }

@@ -21,7 +21,8 @@ doctorLoginForm.addEventListener("submit", async (event) => {
 
   if (isPasswordCorrect) {
     console.log("Login efetuado com sucesso!");
-    window.location.href = "/dashboard.html";
+    //Desenvolver essa bomba ai pqp
+    //window.location.href = "/dashboard.html";
   } else {
     methods.handleErrorMessage(doctorLoginPasswordInput, "Senha incorreta");
   }

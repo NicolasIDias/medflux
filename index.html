@@ -27,7 +27,8 @@
   <div class="options d-flex flex-row-reverse px-3 navbar-expand-lg bg-body-tertiary">
     <nav class="navbar">
       <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -85,7 +86,8 @@
               <h5 class="card-title">Nao possui conta?</h5>
               <p class="card-text">Para utilizar nosso sistema, crie ja sua conta gratuitamente e faca parte da
                 comunidade MedFlux</p>
-                <a href="#" class="button btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Cadastro</a>
+              <a href="#" class="button btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#registerModal">Cadastro</a>
             </div>
           </div>
         </div>
@@ -133,7 +135,7 @@
 
     <!-- <div class="aside-container">
       <aside>
-
+        EU NEM LEMBRO Q Q ERA PRA TER AQUI
       </aside>
     </div> -->
   </main>
@@ -155,10 +157,14 @@
             </div>
             <div class="mb-3">
               <label for="loginSenha" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="loginSenha" name="loginSenha" placeholder="Digite sua senha">
+              <input type="password" class="form-control" id="loginSenha" name="loginSenha"
+                placeholder="Digite sua senha">
             </div>
             <!-- LEMBRAR DE MUDAR A URL -->
-            <h6><a href="./index.html" style="text-decoration: none;"><p>Esqueceu a senha?</p></a></h6>
+            <!-- Esqueci se eu mudei, lembrar mais tarde -->
+            <h6><a href="./index.html" style="text-decoration: none;">
+                <p>Esqueceu a senha?</p>
+              </a></h6>
             <button type="submit" class="btn btn-primary w-100">Entrar</button>
           </form>
         </div>
@@ -171,38 +177,43 @@
   </div>
   <script type="module" src="./assets/js/pages/login/form-validation.js" defer></script>
 
-    <!-- Modal de Login MEDICO -->
-    <div class="modal fade" id="doctorLoginModal" tabindex="-1" aria-labelledby="doctorLoginModal" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="doctorLoginModalLabel">Login</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form action="POST" id="doctor-login-form">
-              <div class="mb-3">
-                <label for="loginEmail" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="doctorLoginEmail" name="doctorLoginEmail" placeholder="seu@email.com">
-              </div>
-              <div class="mb-3">
-                <label for="loginSenha" class="form-label">Senha</label>
-                <input type="password" class="form-control" id="doctorLoginSenha" name="doctorLoginSenha" placeholder="Digite sua senha">
-              </div>
-              <!-- LEMBRAR DE MUDAR A URL -->
-              <h6><a href="./index.html" style="text-decoration: none;"><p>Esqueceu a senha?</p></a></h6>
-              <button type="submit" class="btn btn-primary w-100">Entrar</button>
-            </form>
-          </div>
+  <!-- Modal de Login MEDICO -->
+  <div class="modal fade" id="doctorLoginModal" tabindex="-1" aria-labelledby="doctorLoginModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="doctorLoginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="POST" id="doctor-login-form">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="doctorLoginEmail" name="doctorLoginEmail"
+                placeholder="seu@email.com">
+            </div>
+            <div class="mb-3">
+              <label for="loginSenha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="doctorLoginSenha" name="doctorLoginSenha"
+                placeholder="Digite sua senha">
+            </div>
+            <!-- LEMBRAR DE MUDAR A URL -->
+            <!-- Esqueci se eu mudei, lembrar mais tarde -->
+            <h6><a href="./index.html" style="text-decoration: none;">
+                <p>Esqueceu a senha?</p>
+              </a></h6>
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+          </form>
         </div>
       </div>
     </div>
-    <script type="module" src="./assets/js/pages/login/doctor-form-validation.js" defer></script>
+  </div>
+  <script type="module" src="./assets/js/pages/login/doctor-form-validation.js" defer></script>
 
 
 
 
-<!-- FORMULARIO DE CADASTRO DE TESTE -->
+  <!-- FORMULARIO DE CADASTRO DE TESTE -->
 
   <!-- Modal de cadastro de hospital -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
@@ -220,10 +231,14 @@
             </div>
             <div class="mb-3">
               <label for="loginSenha" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="loginSenha" name="loginSenha" placeholder="Digite sua senha">
+              <input type="password" class="form-control" id="loginSenha" name="loginSenha"
+                placeholder="Digite sua senha">
             </div>
             <!-- LEMBRAR DE MUDAR A URL -->
-            <h6><a href="./index.html" style="text-decoration: none;"><p>Esqueceu a senha?</p></a></h6>
+            <!-- Esqueci se eu mudei, lembrar mais tarde -->
+            <h6><a href="./index.html" style="text-decoration: none;">
+                <p>Esqueceu a senha?</p>
+              </a></h6>
             <button type="submit" class="btn btn-primary w-100">Entrar</button>
           </form>
         </div>
@@ -236,7 +251,7 @@
   </div>
   <script type="module" src="./assets/js/pages/hospital/hospital-recorder.js" defer></script>
 
-  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -274,7 +289,95 @@
       </div>
     </div>
   </div>
+  <script src="./assets/js/pages/register/form-validation.js" defer></script> -->
+
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Registre</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="POST" id="register-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="name" name="nome" placeholder="Nome completo" required>
+            </div>
+            <div class="mb-3">
+              <label for="birthDate" class="form-label">Data de Nascimento</label>
+              <input type="date" class="form-control" id="birthDate" name="dataNascimento" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(31) 9 9999-9999"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="cep" class="form-label">CEP</label>
+              <input type="text" class="form-control" id="cep" name="cep" placeholder="00000-000" required>
+            </div>
+            <div class="mb-3">
+              <label for="endereco" class="form-label">Endereço</label>
+              <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Rua Exemplo, 123"
+                required>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Belo Horizonte" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="estado" class="form-label">Estado</label>
+                <input type="text" class="form-control" id="estado" name="estado" placeholder="MG" maxlength="2"
+                  required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="convenio" class="form-label">Convênio (opcional)</label>
+              <select class="form-select" id="convenio" name="convenio">
+                <option value="" selected>Não informar</option>
+                <option value="Unimed">Unimed</option>
+                <option value="Bradesco Saúde">Bradesco Saúde</option>
+                <option value="Cassi">Cassi</option>
+                <option value="Amil">Amil</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="confirmedPassword" class="form-label">Confirme a Senha</label>
+              <input type="password" class="form-control" id="confirmedPassword" name="confirmedPassword"
+                placeholder="Repita a senha" required>
+            </div>
+
+            <input type="hidden" name="role" value="paciente">
+
+            <button type="submit" class="btn btn-primary w-100">Registrar</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="text-center w-100">
+            Já possui conta?
+            <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">
+              Faça login
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="./assets/js/pages/register/form-validation.js" defer></script>
+
 
 
   <footer class="bg-light text-center py-3 mt-5 border-top">

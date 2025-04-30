@@ -1,6 +1,5 @@
 import { methods } from "./methods.js";
 
-
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await methods.listAll();
   const container = document.querySelector('.cards-hospitais');

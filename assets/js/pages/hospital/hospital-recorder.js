@@ -1,1 +1,0 @@
-import { methods } from './methods.js'

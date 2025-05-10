@@ -1,4 +1,4 @@
-import { Endpoints, get } from "./http.js";
+import { Endpoints, get } from "./HttpClient.js";
 export const PASSWORD_MIN_LEN = 8
 
 export async function isEmailAvailable(email, context){

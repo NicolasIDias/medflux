@@ -1,4 +1,4 @@
-import { methods } from "./methods.js";
+import { methods } from "./index.js";
 
 const doctorLoginForm = document.querySelector("#doctor-login-form");
 const doctorLoginEmailInput = doctorLoginForm.querySelector("#doctorLoginEmail");
@@ -9,7 +9,7 @@ doctorLoginForm.addEventListener("submit", async (event) => {
   const data = Object.fromEntries(new FormData(doctorLoginForm));
 
 
-  const users = await methods.findUserByEmail(data.doctorLoginEmail, "doctors");
+  const users = await methods.findUserByEmail(data.doctorLoginEmail, "medicos");
   const user = users?.[0];
 
   if (!user) {

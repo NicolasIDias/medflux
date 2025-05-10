@@ -37,7 +37,7 @@
               <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#doctorLoginModal">Sou Medico</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#hospitalRegister">Sou Hospital</a>
+              <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#hospitalModal">Sou Hospital</a>
             </li>
           </ul>
         </div>
@@ -193,7 +193,7 @@
                 placeholder="seu@email.com">
             </div>
             <div class="mb-3">
-              <label for="loginSenha" class="form-label">Senha</label>
+              <label for="doctorLoginSenha" class="form-label">Senha</label>
               <input type="password" class="form-control" id="doctorLoginSenha" name="doctorLoginSenha"
                 placeholder="Digite sua senha">
             </div>
@@ -216,7 +216,7 @@
   <!-- FORMULARIO DE CADASTRO DE TESTE -->
 
   <!-- Modal de cadastro de hospital -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal fade" id="hospitalModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -224,14 +224,14 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="POST" id="login-form">
+          <form action="POST" id="hospital-form">
             <div class="mb-3">
-              <label for="loginEmail" class="form-label">E-mail</label>
-              <input type="email" class="form-control" id="loginEmail" name="loginEmail" placeholder="seu@email.com">
+              <label for="hospitalEmail" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="hospitalEmail" name="hospitalEmail" placeholder="seu@email.com">
             </div>
             <div class="mb-3">
-              <label for="loginSenha" class="form-label">Senha</label>
-              <input type="password" class="form-control" id="loginSenha" name="loginSenha"
+              <label for="hospitalSenha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="hospitalSenha" name="hospitalSenha"
                 placeholder="Digite sua senha">
             </div>
             <!-- LEMBRAR DE MUDAR A URL -->
@@ -386,6 +386,29 @@
       Desenvolvido por <a href="https://github.com/NicolasIDias" target="_blank">Nicolas</a>
     </p>
   </footer>
+
+  <script>7
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get("id");
+  
+    if (userId) {
+      document.querySelectorAll("a[href]").forEach(link => {
+        const href = link.getAttribute("href");
+  
+        if (
+          href.startsWith("#") ||
+          link.hasAttribute("data-bs-toggle")
+        ) return;
+  
+        const url = new URL(href, window.location.origin);
+  
+        url.searchParams.set("id", userId);
+
+        link.setAttribute("href", url.pathname + url.search);
+      });
+    }
+  </script>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"

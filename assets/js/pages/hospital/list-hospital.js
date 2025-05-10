@@ -30,10 +30,10 @@ function renderCards(hospital) {
           <p><strong>Tipos de atendimentos:</strong> ${hospital.especialidades?.join(', ') || 'Não informado'}</p>
         </div>
         <div class="buttons">
-          <a href="./filas-presenciais.html" class="btn btn-outline-primary btn-action mb-1">
+          <a href="./filas-presenciais.html?id=${hospital.id}" class="btn btn-outline-primary btn-action mb-1">
             <i class="fas fa-users"></i> Ver filas presenciais
           </a>
-          <a href="./filas-online.html" class="btn btn-outline-secondary btn-action">
+          <a href="./filas-online.html?id=${hospital.id}" class="btn btn-outline-secondary btn-action">
             <i class="fas fa-laptop-medical"></i> Ver Atendimentos Online
           </a>
         </div>
